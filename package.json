@@ -1,0 +1,12 @@
+{
+  "name": "@johnfellows/unsafe-code-runner",
+  "version": "1.0.0",
+  "description": "A totally unsafe way to run code from php, py, go from js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
