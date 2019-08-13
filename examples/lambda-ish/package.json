@@ -1,0 +1,26 @@
+{
+  "name": "lambda-ish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@johnfellows/unsafe-code-runner": "^1.0.1",
+    "@nmq/q": "^1.0.3",
+    "exec-php": "0.0.5",
+    "express": "^4.17.1",
+    "gonode": "^0.1.2",
+    "nel": "^1.1.0",
+    "python-runner": "^1.1.0",
+    "python-shell": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}

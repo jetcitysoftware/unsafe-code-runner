@@ -1,0 +1,32 @@
+{
+  "triggers": {
+    "events": {
+      "database:create": {
+        "language": "javascript",
+        "function": "create-record.js"
+      },
+      "database:delete": {
+        "language": "javascript",
+        "function": "delete-record.js"
+      }
+    },
+    "routes": {
+      "/api/run/javascript": {
+        "language":"javascript",
+        "function": "app.js"
+      },
+      "/api/run/go": {
+        "language":"go",
+        "function": "app.go"
+      },
+      "/api/run/php": {
+        "language":"php",
+        "function":"app.php"
+      },
+      "/api/run/python": {
+        "language":"python",
+        "function":"app.py"
+      }
+    }
+  }
+}

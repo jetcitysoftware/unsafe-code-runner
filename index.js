@@ -4,12 +4,10 @@ const PHP = require('exec-php');
 const Go = require('gonode').Go;
 const {PythonShell} = require('python-shell');
 
-const FUNCTIONS_PATH = './functions/';
-
 function go(context, file) {
 
   const options = {
-    path: `${FUNCTIONS_PATH}/${file}`,
+    path:file,
     initAtOnce	: true,
   };
 
@@ -33,7 +31,7 @@ function php(context, file) {
 
   return new Promise( (resolve, reject) => {
 
-    PHP(`${FUNCTIONS_PATH}/${file}`, function (error, run) {
+    PHP(file, function (error, run) {
 
       let contextString = JSON.stringify(context);
 
@@ -54,7 +52,6 @@ function python(context, file) {
   let options = {
     mode: 'text',
     pythonOptions: ['-u'],
-    scriptPath: FUNCTIONS_PATH,
     args: ctx,
   };
 
@@ -70,7 +67,7 @@ function python(context, file) {
 
 function javascript(context, file) {
 
-  const app = require(`${FUNCTIONS_PATH}/${file}`);
+  const app = require(file);
 
   let response = typeof app === 'function' && app(context);
 
